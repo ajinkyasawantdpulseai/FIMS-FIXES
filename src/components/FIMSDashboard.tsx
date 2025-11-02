@@ -937,14 +937,14 @@ export const FIMSDashboard: React.FC<FIMSDashboardProps> = ({ user, onSignOut })
             className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-sm md:text-base"
           >
             <option value="">{t('fims.allStatuses')}</option>
-            <option value="planned">Planned</option>
-            <option value="in_progress">In Progress</option>
-            <option value="draft">Draft</option>
-            <option value="submitted">Submitted</option>
-            <option value="approved">Approved</option>
-            <option value="rejected">Rejected</option>
-            <option value="reassigned">Reassigned</option>
-            <option value="under_review">Under Review</option>
+            <option value="planned">{t('statuses.planned','Planned')}</option>
+            <option value="in_progress">{t('statuses.in_progress','In Progress')}</option>
+            <option value="draft">{t('statuses.draft','Draft')}</option>
+            <option value="submitted">{t('statuses.submitted','Submitted')}</option>
+            <option value="approved">{t('statuses.approved','Approved')}</option>
+            <option value="rejected">{t('statuses.rejected','Rejected')}</option>
+            <option value="reassigned">{t('statuses.reassigned','Reassigned')}</option>
+            <option value="under_review">{t('statuses.under_review','Under Review')}</option>
           </select>
         </div>
       </div>
@@ -964,7 +964,7 @@ export const FIMSDashboard: React.FC<FIMSDashboardProps> = ({ user, onSignOut })
                   <div>{t('fims.inspectionNumber')}</div>
                   <input
                     type="text"
-                    placeholder="Filter..."
+                    placeholder={t('common.filter...', 'Filter...')}
                     value={columnFilters.inspectionNumber}
                     onChange={(e) => setColumnFilters({...columnFilters, inspectionNumber: e.target.value})}
                     className="mt-1 w-full px-2 py-1 text-xs border border-blue-300 rounded focus:ring-1 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-900"
@@ -976,7 +976,7 @@ export const FIMSDashboard: React.FC<FIMSDashboardProps> = ({ user, onSignOut })
                   <div>{t('fims.category')}</div>
                   <input
                     type="text"
-                    placeholder="Filter..."
+                    placeholder={t('common.filter...', 'Filter...')}
                     value={columnFilters.category}
                     onChange={(e) => setColumnFilters({...columnFilters, category: e.target.value})}
                     className="mt-1 w-full px-2 py-1 text-xs border border-gray-300 rounded focus:ring-1 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-900"
@@ -987,7 +987,7 @@ export const FIMSDashboard: React.FC<FIMSDashboardProps> = ({ user, onSignOut })
                   <div>{t('fims.status')}</div>
                   <input
                     type="text"
-                    placeholder="Filter..."
+                    placeholder={t('common.filter...', 'Filter...')}
                     value={columnFilters.status}
                     onChange={(e) => setColumnFilters({...columnFilters, status: e.target.value})}
                     className="mt-1 w-full px-2 py-1 text-xs border border-blue-300 rounded focus:ring-1 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-900"
@@ -998,7 +998,7 @@ export const FIMSDashboard: React.FC<FIMSDashboardProps> = ({ user, onSignOut })
                   <div>{t('fims.date')}</div>
                   <input
                     type="text"
-                    placeholder="Filter..."
+                    placeholder={t('common.filter...', 'Filter...')}
                     value={columnFilters.date}
                     onChange={(e) => setColumnFilters({...columnFilters, date: e.target.value})}
                     className="mt-1 w-full px-2 py-1 text-xs border border-gray-300 rounded focus:ring-1 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-900"
@@ -1006,10 +1006,10 @@ export const FIMSDashboard: React.FC<FIMSDashboardProps> = ({ user, onSignOut })
                   />
                 </th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider bg-gray-50 w-[10%]">
-                  <div>{t('filled_by_name','Filled By Name')}</div>
+                  <div>{t('common.filter_by_name','Filter By Name')}</div>
                   <input
                     type="text"
-                    placeholder="Filter..."
+                    placeholder={t('common.filter...', 'Filter...')}
                     value={columnFilters.filled_by_name}
                     onChange={(e) => setColumnFilters({...columnFilters, filled_by_name: e.target.value})}
                     className="mt-1 w-full px-2 py-1 text-xs border border-gray-300 rounded focus:ring-1 focus:ring-blue-500 focus:border-blue-500 bg-white text-gray-900"
@@ -1020,8 +1020,8 @@ export const FIMSDashboard: React.FC<FIMSDashboardProps> = ({ user, onSignOut })
                 <th className="px-6 py-4 text-left text-xs font-bold text-blue-900 uppercase tracking-wider bg-gradient-to-r from-blue-300 to-blue-200 shadow-sm w-[22%]">
                   {t('fims.actions')}
                 </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider bg-gray-50 w-[12%]">Photos</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider bg-gray-50 w-[16%]">Complete/Revisit</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider bg-gray-50 w-[12%]">{t('common.photos','Photos')}</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider bg-gray-50 w-[16%]">{t('common.complete/Revisit','Complete/Revisit')}</th>
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
@@ -1051,7 +1051,8 @@ export const FIMSDashboard: React.FC<FIMSDashboardProps> = ({ user, onSignOut })
                       </td>
                       
                       <td className="px-6 py-4 text-sm text-blue-800 hover:text-blue-600 transition-colors duration-200 w-[11%] truncate">
-                        {category ? t(`categories.${category.form_type}`, category.name) : '-'}
+                        {category ? (i18n.language === 'mr' ? category.name_marathi : category.name) : '-'}
+
                       </td>
                       <td className="px-6 py-4 w-[7%]">
                         <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
@@ -1093,7 +1094,7 @@ export const FIMSDashboard: React.FC<FIMSDashboardProps> = ({ user, onSignOut })
                             title="View Inspection"
                           >
                             <Eye className="h-4 w-4" />
-                            <span className="text-xs font-medium">View</span>
+                            <span className="text-xs font-medium">{t('common.view','View')}</span>
                           </button>
                           <button
                             onClick={() => {
@@ -1111,7 +1112,7 @@ export const FIMSDashboard: React.FC<FIMSDashboardProps> = ({ user, onSignOut })
                             title="Edit Inspection"
                           >
                             <Edit className="h-4 w-4" />
-                            <span className="text-xs font-medium">Edit</span>
+                            <span className="text-xs font-medium">{t('common.edit','Edit')}</span>
                           </button>
                           <button
                             onClick={() => handleDeleteInspection(inspection.id)}
@@ -1126,7 +1127,7 @@ export const FIMSDashboard: React.FC<FIMSDashboardProps> = ({ user, onSignOut })
                             title="Delete Inspection"
                           >
                             <Trash2 className="h-4 w-4" />
-                            <span className="text-xs font-medium">Delete</span>
+                            <span className="text-xs font-medium">{t('common.delete','Delete')}</span>
                           </button>
                         </div>
                       </td>
@@ -1146,14 +1147,14 @@ export const FIMSDashboard: React.FC<FIMSDashboardProps> = ({ user, onSignOut })
                             className="px-2 py-1 text-xs bg-green-100 text-green-700 hover:bg-green-200 rounded"
                             title="Complete"
                           >
-                            Complete
+                            {t('common.complete','Complete')}
                           </button>
                           <button
                             onClick={() => handleRevisitInspection(inspection.id)}
                             className="px-2 py-1 text-xs bg-orange-100 text-orange-700 hover:bg-orange-200 rounded"
                             title="Revisit"
                           >
-                            Revisit
+                            {t('common.revisit','Revisit')}
                           </button>
                         </div>
                       </td>
@@ -1279,6 +1280,11 @@ export const FIMSDashboard: React.FC<FIMSDashboardProps> = ({ user, onSignOut })
       <p className="text-gray-400 text-sm mt-2">Reports and export features will be available soon.</p>
     </div>
   );
+
+  // Console Commands
+  // console.log("Categories:", categories);
+  console.log("Inspection: ",inspections);
+
 
   return (
     <div className="min-h-screen bg-gray-50">

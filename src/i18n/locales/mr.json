@@ -23,7 +23,14 @@
     "add": "जोडा",
     "update": "अपडेट करा",
     "saving": "जतन करत आहे...",
-    "deleteConfirm": "आपल्याला खात्री आहे की आपण हे हटवू इच्छिता?"
+    "deleteConfirm": "आपल्याला खात्री आहे की आपण हे हटवू इच्छिता?",
+    "filter..." : "फिल्टर...",
+    "filter_by_name": "नावानुसार फिल्टर करा",
+    "action": "क्रिया",
+    "photos": "फोटो",
+    "complete/Revisit": "पूर्ण / पुन्हा पाहा",
+    "complete" : "पूर्ण",
+    "revisit": "पुन्हा पाहा"
   },
   "fims": {
     "title": "क्षेत्रीय तपासणी व्यवस्थापन प्रणाली",
@@ -489,5 +496,33 @@
     "unauthorized": "अनधिकृत प्रवेश",
     "forbidden": "प्रवेश निषिद्ध",
     "notFound": "पृष्ठ सापडले नाही"
-  }
+  },
+  "statuses": {
+  "planned": "नियोजित",
+  "in_progress": "प्रगतीपथावर",
+  "draft": "मसुदा",
+  "submitted": "सादर केले",
+  "under_review": "परीक्षणाधीन",
+  "approved": "मंजूर",
+  "rejected": "नामंजूर",
+  "reassigned": "पुनःनियुक्त"
+}
+  ,
+  "categories" : {
+  "anganwadi": "अंगणवाडी केंद्र तपासणी फॉर्म",
+  "Grampanchayat Inspection": "ग्रामपंचायत तपासणी",
+  "Health Inspection": "आरोग्य तपासणी",
+  "High Court Order Inspection Form": "उच्च न्यायालय आदेश तपासणी प्रपत्र",
+  "Mahatma Gandhi National Rural Employment Guarantee Scheme Inspection": "महात्मा गांधी राष्ट्रीय ग्रामीण रोजगार हमी योजना तपासणी",
+  "Monthly Report Submission Form": "मासिक अहवाल सादर फॉर्म",
+  "office": "दफ्तर निरीक्षण प्रपत्र",
+  "pashutapasani": "पशुतपासणी",
+  "Rajya Shaishanik Prashikshan Inspection Form": "राज्य शैक्षणिक प्रशिक्षण तपासणी प्रपत्र",
+  "State Level Quality Inspection Form": "राज्यस्तरीय गुणवत्ता तपासणी प्रपत्र",
+  "Sub Centre Monitoring": "उपकेंद्र निरीक्षण",
+  "Veterinary Institution Inspection": "पशुवैद्यकीय संस्था तपासणी",
+  "Zilla Parishad Construction Inspection Format": "जिल्हा परिषद बांधकाम निरीक्षण नमुना",
+  "Zilla Parishad Construction Progress Report Form": "जिल्हा परिषद बांधकाम प्रगती अहवाल प्रपत्र"
+}
+
 }
