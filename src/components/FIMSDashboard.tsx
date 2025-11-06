@@ -503,8 +503,8 @@ export const FIMSDashboard: React.FC<FIMSDashboardProps> = ({ user, onSignOut })
 
   const renderDashboard = () => (
     <div className="space-y-6 md:space-y-8">
-      {/* Modern Hero Images Section */}
-      <div className="relative overflow-hidden rounded-3xl mb-8 z-0">
+      {/* Hero Images Section */}
+      {/* <div className="relative overflow-hidden rounded-3xl mb-8 z-0">
         <div className="flex animate-scroll">
           {[
             '/files_6345612-1761837302350-image.png',
@@ -540,9 +540,9 @@ export const FIMSDashboard: React.FC<FIMSDashboardProps> = ({ user, onSignOut })
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
-      {/* Modern KPI Cards with Glassmorphism */}
+      {/* KPI Cards with Glassmorphism */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
         {[
           {
@@ -593,7 +593,7 @@ export const FIMSDashboard: React.FC<FIMSDashboardProps> = ({ user, onSignOut })
         ))}
       </div>
 
-      {/* Modern Quick Actions with Gradient Cards */}
+      {/* Quick Actions with Gradient Cards */}
       <div className="bg-white/70 backdrop-blur-xl rounded-3xl shadow-xl border border-gray-200/50 p-6 md:p-8">
         <div className="flex items-center justify-between mb-6">
           <h3 className="text-2xl font-black text-gray-900 flex items-center">
@@ -640,7 +640,7 @@ export const FIMSDashboard: React.FC<FIMSDashboardProps> = ({ user, onSignOut })
         </div>
       </div>
 
-      {/* Modern Recent Inspections Table */}
+      {/* Recent Inspections Table */}
       <div className="bg-white/70 backdrop-blur-xl rounded-3xl shadow-xl border border-gray-200/50 overflow-hidden">
         <div className="px-6 md:px-8 py-6 border-b border-gray-200/50 bg-gradient-to-r from-gray-50/50 to-transparent">
           <h3 className="text-2xl font-black text-gray-900 flex items-center">
@@ -762,7 +762,7 @@ export const FIMSDashboard: React.FC<FIMSDashboardProps> = ({ user, onSignOut })
 
   const renderInspections = () => (
     <div className="space-y-6 md:space-y-8">
-      {/* Modern Filters */}
+      {/* Filters */}
       <div className="bg-white/70 backdrop-blur-xl rounded-3xl shadow-xl border border-gray-200/50 p-6 md:p-8">
         <div className="flex items-center justify-between mb-6">
           <h3 className="text-2xl font-black text-gray-900 flex items-center">
@@ -822,7 +822,7 @@ export const FIMSDashboard: React.FC<FIMSDashboardProps> = ({ user, onSignOut })
         </div>
       </div>
 
-      {/* Modern Inspections Table */}
+      {/* Inspections Table */}
       <div className="bg-white/70 backdrop-blur-xl rounded-3xl shadow-xl border border-gray-200/50 overflow-hidden">
         <div className="px-6 md:px-8 py-6 border-b border-gray-200/50 bg-gradient-to-r from-gray-50/50 to-transparent">
           <h3 className="text-2xl font-black text-gray-900 flex items-center">
@@ -969,7 +969,7 @@ export const FIMSDashboard: React.FC<FIMSDashboardProps> = ({ user, onSignOut })
           </table>
         </div>
         
-        {/* Modern Mobile Cards */}
+        {/* Mobile Cards */}
         <div className="md:hidden divide-y divide-gray-100/50">
           {getFilteredInspections().length === 0 ? (
             <div className="p-12 text-center">
@@ -1067,7 +1067,7 @@ export const FIMSDashboard: React.FC<FIMSDashboardProps> = ({ user, onSignOut })
       {/* Mobile Header */}
       {isMobileState && renderMobileHeader()}
 
-      {/* Modern Desktop Header */}
+      {/*  Desktop Header */}
       <div className="hidden md:block bg-white/70 backdrop-blur-xl border-b border-gray-200/50 shadow-sm sticky top-0 z-50">
         <div className="px-8 py-5">
           <div className="flex items-center justify-between">
@@ -1194,7 +1194,7 @@ export const FIMSDashboard: React.FC<FIMSDashboardProps> = ({ user, onSignOut })
       {/* Mobile Navigation */}
       {isMobileState && renderMobileNavigation()}
 
-      {/* Modern Photo Modal */}
+      {/* Photo Modal */}
       {showPhotoModal && viewingPhotos.length > 0 && (
         <div className="fixed inset-0 bg-black/95 backdrop-blur-xl flex items-center justify-center z-50 p-4">
           <div className="max-w-6xl w-full max-h-[95vh] bg-white/95 backdrop-blur-xl rounded-3xl overflow-hidden shadow-2xl">
@@ -1287,7 +1287,7 @@ export const FIMSDashboard: React.FC<FIMSDashboardProps> = ({ user, onSignOut })
         </div>
       )}
 
-      {/* Modern Revisit Assignment Modal */}
+      {/* Revisit Assignment Modal */}
       {showRevisitModal && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50">
           <div className="bg-white/95 backdrop-blur-xl rounded-3xl shadow-2xl max-w-lg w-full mx-4 overflow-hidden">
