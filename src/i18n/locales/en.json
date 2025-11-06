@@ -24,7 +24,14 @@
     "edit": "Edit", 
     "update": "Update",
     "saving": "Saving...",
-    "deleteConfirm": "Are you sure you want to delete this?"
+    "deleteConfirm": "Are you sure you want to delete this?",
+    "filter...": "Filter...",
+    "filter_by_name": "Filter by Name",
+    "actions" : "Actions",
+    "photos": "Photos",
+    "complete/Revisit": "Complete/Revisit",
+    "complete" : "Complete",
+    "revisit": "Revisit"
   },
   "fims": {
     "title": "Field Inspection Management System",
@@ -565,5 +572,21 @@
     "approved": "Approved",
     "rejected": "Rejected",
     "reassigned": "Reassigned"
-  }
+  },
+  "categories" : {
+  "anganwadi": "Anganwadi Center Inspection",
+  "Grampanchayat Inspection": "Grampanchayat Inspection",
+  "Health Inspection": "Health Inspection",
+  "High Court Order Inspection Form": "High Court Order Inspection Form",
+  "Mahatma Gandhi National Rural Employment Guarantee Scheme Inspection": "Mahatma Gandhi National Rural Employment Guarantee Scheme Inspection",
+  "Monthly Report Submission Form": "Monthly Report Submission Form",
+  "office": "office_inspection",
+  "pashutapasani": "pashutapasani",
+  "Rajya Shaishanik Prashikshan Inspection Form": "Rajya Shaishanik Prashikshan Inspection Form",
+  "State Level Quality Inspection Form": "State Level Quality Inspection Form",
+  "Sub Centre Monitoring": "Sub Centre Monitoring",
+  "Veterinary Institution Inspection": "Veterinary Institution Inspection",
+  "Zilla Parishad Construction Inspection Format": "Zilla Parishad Construction Inspection Format",
+  "Zilla Parishad Construction Progress Report Form": "Zilla Parishad Construction Progress Report Form"
+}
 }
