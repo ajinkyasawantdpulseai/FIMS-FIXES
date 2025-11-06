@@ -122,11 +122,24 @@ function App() {
     return <FIMSDashboard user={user} onSignOut={handleSignOut} />;
   }
 
-  // Show FIMS-specific sign-in page
+  // Show FIMS-specific sign-in page with background image
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-indigo-50 flex items-center justify-center p-4">
-      <div className="w-full max-w-md">
-        <div className="bg-white rounded-2xl shadow-xl p-8">
+<div 
+      className="min-h-screen flex items-center justify-center p-4 relative"
+      style={{
+        backgroundImage: 'url("/website_background_collage.jpg")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        width: '100%',
+        height: '100vh'
+      }}
+    >
+      {/* Overlay for better card visibility */}
+      <div className="absolute inset-0 bg-black/40 backdrop-blur-none"></div>
+      
+      <div className="w-full max-w-md relative z-10">
+        <div className="bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl p-8">
           {/* FIMS Header */}
           <div className="text-center mb-8">
             <div className="flex justify-center mb-4">
@@ -151,7 +164,8 @@ function App() {
           {/* Footer */}
           <div className="mt-8 text-center">
             <p className="text-xs text-gray-500">
-              {t('auth.secureAccess', 'Secure access to field inspection management system')}
+              {/* {t('auth.secureAccess', 'Secure access to field inspection management system')} */}
+              © 2025 ZP Chandrapur, Govt of Maharashtra. All rights reserved
             </p>
           </div>
         </div>
