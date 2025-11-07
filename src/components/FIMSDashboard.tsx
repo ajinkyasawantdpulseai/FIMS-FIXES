@@ -655,7 +655,7 @@ export const FIMSDashboard: React.FC<FIMSDashboardProps> = ({ user, onSignOut })
               <tr>
                 {[
                   { key: 'inspectionNumber', label: t('fims.inspectionNumber'), width: '15%' },
-                  { key: 'location', label: t('fims.location'), width: '22%' },
+                  { key: 'location', label: t('fims.location'), width: '22%', maxWidth: '10px' },
                   { key: 'category', label: t('fims.category'), width: '22%' },
                   { key: 'status', label: t('fims.status'), width: '15%' },
                   { key: 'date', label: t('fims.date'), width: '13%' },
@@ -687,8 +687,12 @@ export const FIMSDashboard: React.FC<FIMSDashboardProps> = ({ user, onSignOut })
                     <td className="px-6 py-4 text-sm font-bold text-gray-900 truncate">
                       {inspection.inspection_number}
                     </td>
-                    <td className="px-6 py-4 text-sm text-gray-700 truncate font-medium">
-                      {inspection.location_name}
+                    <td className="px-6 py-4 text-sm text-gray-700 font-medium">
+                      <div className="overflow-x-auto scrollbar-custom" style={{ maxWidth: '310px' }}>
+                        <div className="whitespace-nowrap">
+                          {inspection.location_name}
+                        </div>
+                      </div>
                     </td>
                     <td className="px-6 py-4 text-sm text-gray-700 truncate">
                       {category ? t(`categories.${category.form_type}`, category.name) : '-'}
