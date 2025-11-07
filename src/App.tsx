@@ -10,6 +10,15 @@ function App() {
   const { t } = useTranslation();
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+    useEffect(() => {
+    // Preload background image
+    const img = new Image();
+    img.src = '/website_background_collage.jpg';
+    img.onload = () => setImageLoaded(true);
+    img.onerror = () => setImageLoaded(true); // Show content even if image fails to load
+  }, []);
 
   useEffect(() => {
     // Check if user is already signed in
@@ -120,6 +129,17 @@ function App() {
   // If user is authenticated, show FIMS Dashboard directly
   if (user) {
     return <FIMSDashboard user={user} onSignOut={handleSignOut} />;
+  }
+
+    if (!imageLoaded) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-gray-600 text-sm">Loading...</p>
+        </div>
+      </div>
+    );
   }
 
   // Show FIMS-specific sign-in page with background image
