@@ -820,14 +820,14 @@ export const FIMSDashboard: React.FC<FIMSDashboardProps> = ({ user, onSignOut })
             className="px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition-all text-sm font-bold bg-white/80 backdrop-blur-sm"
           >
             <option value="">{t('fims.allStatuses')}</option>
-            <option value="planned">{t('statuses.planned','Planned')}</option>
+            {/* <option value="planned">{t('statuses.planned','Planned')}</option> */}
             <option value="in_progress">{t('statuses.in_progress','In Progress')}</option>
             <option value="draft">{t('statuses.draft','Draft')}</option>
             <option value="submitted">{t('statuses.submitted','Submitted')}</option>
             <option value="approved">{t('statuses.approved','Approved')}</option>
-            <option value="rejected">{t('statuses.rejected','Rejected')}</option>
-            <option value="reassigned">{t('statuses.reassigned','Reassigned')}</option>
-            <option value="under_review">{t('statuses.under_review','Under Review')}</option>
+            {/* <option value="rejected">{t('statuses.rejected','Rejected')}</option> */}
+            {/* <option value="reassigned">{t('statuses.reassigned','Reassigned')}</option> */}
+            {/* <option value="under_review">{t('statuses.under_review','Under Review')}</option> */}
           </select>
         </div>
       </div>
