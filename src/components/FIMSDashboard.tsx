@@ -576,22 +576,28 @@ export const FIMSDashboard: React.FC<FIMSDashboardProps> = ({ user, onSignOut })
         ].map((card, idx) => (
           <div
             key={idx}
-            className={`group relative bg-white/70 backdrop-blur-xl border border-gray-200/50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 overflow-hidden`}
+            className="group relative bg-white/70 backdrop-blur-xl border border-gray-200/50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-3 overflow-hidden"
           >
-            <div className={`absolute inset-0 bg-gradient-to-br ${card.lightGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
-            <div className="relative">
-              <div className="flex items-center justify-between mb-4">
-                <div className={`p-3 bg-gradient-to-br ${card.gradient} rounded-xl shadow-lg`}>
-                  <card.icon className="h-6 w-6 text-white" />
-                </div>
-                <TrendingUp className={`h-5 w-5 bg-gradient-to-br ${card.gradient} bg-clip-text text-transparent`} />
+            <div
+              className={`absolute inset-0 bg-gradient-to-br ${card.lightGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+            ></div>
+
+            <div className="relative flex items-center gap-3">
+              {/* ICON */}
+              <div className={`p-2 bg-gradient-to-br ${card.gradient} rounded-xl shadow-lg`}>
+                <card.icon className="h-6 w-6 text-white" />
               </div>
-              <p className="text-sm font-semibold text-gray-600 mb-2">{card.title}</p>
-              <p className="text-4xl font-black text-gray-900">{card.value}</p>
+
+              {/* TEXT + VALUE */}
+              <div className="flex flex-col justify-center">
+                <p className="text-sm font-semibold text-gray-600 leading-tight">{card.title}</p>
+                <p className="text-xl font-black text-gray-900 leading-tight">{card.value}</p>
+              </div>
             </div>
           </div>
         ))}
       </div>
+
 
       {/* Quick Actions with Gradient Cards */}
       <div className="bg-white/70 backdrop-blur-xl rounded-3xl shadow-xl border border-gray-200/50 p-6 md:p-8">
